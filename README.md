@@ -55,15 +55,24 @@ If something breaks: re-run environment activation and reinstall packages.
 ---
 ## 🗂 Project Structure (Key Files)
 ```
-Project--
-  travel_emails.xlsx        # Source dataset (sample) - required
-  email_rules.py            # Simple baseline + refined classification logic
-  main.py                   # Task 3 script: rules + optional ML + metrics
-  Travel_EDA.ipynb          # Notebook for Task 1 + Task 2 (clean + EDA + rule labels)
-  tests/
-    test_email_rules.py     # Minimal concept-focused tests (pytest)
-  README.md                 # (You are here)
+ML_and_Data_Analyst_Project/
+├── email_rules.py                  # Baseline + refined rule helpers (used in tests)
+├── README.md
+├── travel_emails_[RAW].xlsx        # Raw sheet (original dataset) 
+├── PostgreSQL/
+│   ├── postgresql_travel_emails.csv #Exported from Postgresql
+│   └── Screenshot*.png             # DB related screenshots
+├── Task 1/
+│   └── travel_emails.xlsx          # Working cleaned dataset used by scripts
+├── Task 2/
+│   ├── Travel_EDA.ipynb            # Cleaning / EDA / early rule exploration
+│   └── Travel_EDA.pdf              # Exported notebook
+├── Task 3/
+│   └── main.py                     # Auto file locator + refined rules + weak ML
+└── Unit_test/
+  └── test_email_rules.py         # Pytest unit tests (validation & rule logic)
 ```
+Note: `main.py` searches several of the above paths to locate `travel_emails.xlsx` (prefers `Task 1/`).
 
 ---
 ## ✅ Task Mapping (Prompt -> Implementation)
@@ -123,7 +132,7 @@ pip install pandas scikit-learn numpy openpyxl pytest
 ## 🚀 Quick Start
 Clone the repository:
 ```powershell
-git clone <YOUR_REPO_URL> internship_email_project
+https://github.com/NiranjanGhising/ML-and-Data_Analayst_Project.git
 cd internship_email_project
 ```
 Ensure `travel_emails.xlsx` is in the root folder (or replace with your sheet named appropriately).
