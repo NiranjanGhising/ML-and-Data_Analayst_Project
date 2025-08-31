@@ -10,7 +10,7 @@ Below are the exact commands I use on Windows PowerShell. Replace `<REPO_URL>` w
 
 ```powershell
 # 1. Clone
-git clone <REPO_URL> email_classifier_project
+https://github.com/NiranjanGhising/ML-and-Data_Analayst_Project.git
 cd email_classifier_project
 
 # 2. (Optional) Create & activate virtual environment
